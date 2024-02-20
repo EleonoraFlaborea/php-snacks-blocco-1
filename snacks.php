@@ -8,22 +8,28 @@ Stampiamo a schermo tutte le partite con questo schema:
 Olimpia Milano - Cantù | 55-60
 */
 
-$lists = ['match_one' => ['name-home' => 'Reyer Venezia', 
-                          'name-away' => 'Virtus Bologna', 
-                          'points-home' => 76,
-                          'points-away' => 90],
-        'match_two' => ['name-home' => 'Virtus Roma', 
-                        'name-away' => 'Pall. Treviso', 
-                        'points-home' => 63, 
-                        'points-away' => 88],
-        'match_three' => ['name-home' => 'Pall. Trieste', 
-                        'name-away' => 'Napoli Basket', 
-                        'points-home' => 77,
-                        'points-away' => 80],
-        'match_four' => ['name-home' => 'Pall. Trapani', 
-                        'name-away' => 'Pall. Messina', 
-                        'points-home' => 69, 
-                        'points-away' => 75]
+$lists = [
+    ['name-home' => 'Reyer Venezia', 
+    'name-away' => 'Virtus Bologna', 
+    'points-home' => 76,
+    'points-away' => 90
+    ],
+
+    ['name-home' => 'Virtus Roma', 
+    'name-away' => 'Pall. Treviso', 
+    'points-home' => 63, 
+    'points-away' => 88
+    ],
+    ['name-home' => 'Pall. Trieste', 
+    'name-away' => 'Napoli Basket', 
+    'points-home' => 77,
+    'points-away' => 80
+    ],
+    ['name-home' => 'Pall. Trapani', 
+    'name-away' => 'Pall. Messina', 
+    'points-home' => 69, 
+    'points-away' => 75
+    ]
 ]
 
 ?>
