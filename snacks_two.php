@@ -8,32 +8,19 @@ che mail contenga un punto e una chiocciola e che age sia un numero.
 Se tutto è ok stampare “Accesso riuscito”, altrimenti “Accesso negato”
 */
 
-$first_name = $_GET['first_name'];
-$age = $_GET['age'];
-$email = $_GET['email'];
+$first_name = $_GET['first_name'] ?? '';
+$age = $_GET['age'] ?? '';
+$email = $_GET['email'] ?? '';
 
-//name
-if (empty($first_name)) {
- die("<p>Non hai inserito il nome</p>\n");
-}
-if (strlen($first_name) <3) {
-   die("<p>Il nome deve avere almeno 3 caratteri</p>\n");
-}
+//validazioni
+$is_age_valid = is_numeric($age) && $age > 0;
+$is_name_valid = mb_strlen(trim($name)) > 3;
+$is_email_valid = str_contains($email,'@') && str_contains($email,'.');
+$is_form_valid = !$is_age_valid || !$is_email_valid || !$is_name_valid;
 
-//age
-if (empty($age)) {
-die("<p>Non hai inserito l'età</p>\n");
-}
+$message = $is_form_invalid ? 'accesso negato': 'accesso riuscito';
 
-if (!is_numeric($age)) {
-die("<p>Non hai inserito un numero<p>\n");
-}
-
-//email
-if (empty($email)) {
-die("<p>Non hai inserito la email</p>\n");
-}
-
+echo $message;
 
 
 
